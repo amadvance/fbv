@@ -28,8 +28,8 @@ AC_SEARCH_LIBS([png_create_read_struct], [png], [
 	]
 )
 
-AC_SEARCH_LIBS([jpeg_create_decompress], [jpeg], [
-	LIBS="-ljpeg"
+AC_SEARCH_LIBS([jpeg_start_decompress], [jpeg], [
+	LIBS="$LIBS -ljpeg"
 	CFLAGS="$CFLAGS -DFBV_SUPPORT_JPEG"
 	], [
 	]
